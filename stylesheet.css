@@ -101,7 +101,10 @@ h2 {
   font-size: 14px;
   font-weight: 700;
 }
-
+heading {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+}
 .name {
   padding-top: 20px;
   margin: 0;
