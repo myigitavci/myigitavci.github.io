@@ -22,7 +22,7 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.6;
       color: #2d3748;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: #faf9f6;
       min-height: 100vh;
     }
 
@@ -36,7 +36,7 @@
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
       overflow: hidden;
       margin-bottom: 2rem;
     }
@@ -179,11 +179,13 @@
       color: #667eea;
       text-decoration: none;
       font-weight: 500;
+      font-size: 1.1rem;
       transition: color 0.3s ease;
     }
 
     .about-text a:hover {
       color: #764ba2;
+      text-decoration: underline;
     }
 
     .interests-grid {
@@ -194,7 +196,7 @@
     }
 
     .interest-item {
-      background: #f7fafc;
+      background: #f8f9fa;
       padding: 1rem;
       border-radius: 10px;
       border-left: 4px solid #667eea;
@@ -202,7 +204,7 @@
     }
 
     .interest-item:hover {
-      background: #edf2f7;
+      background: #e9ecef;
       transform: translateX(5px);
     }
 
@@ -211,14 +213,14 @@
       align-items: center;
       gap: 1rem;
       padding: 1.5rem;
-      background: #f7fafc;
+      background: #f8f9fa;
       border-radius: 12px;
       margin-bottom: 1rem;
       transition: all 0.3s ease;
     }
 
     .education-item:hover {
-      background: #edf2f7;
+      background: #e9ecef;
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
@@ -253,14 +255,14 @@
     .update-item {
       padding: 1rem;
       margin-bottom: 1rem;
-      background: #f7fafc;
+      background: #f8f9fa;
       border-radius: 10px;
       border-left: 4px solid #667eea;
       transition: all 0.3s ease;
     }
 
     .update-item:hover {
-      background: #edf2f7;
+      background: #e9ecef;
       transform: translateX(5px);
     }
 
@@ -280,24 +282,26 @@
       background: white;
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       transition: all 0.3s ease;
     }
 
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
     }
 
     .project-image {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      height: 250px;
+      object-fit: contain;
+      background: #f8f9fa;
+      padding: 1rem;
       transition: transform 0.3s ease;
     }
 
     .project-card:hover .project-image {
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
 
     .project-content {
@@ -320,6 +324,7 @@
 
     .project-title a:hover {
       color: #667eea;
+      text-decoration: underline;
     }
 
     .project-authors {
@@ -339,7 +344,7 @@
       color: #667eea;
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.9rem;
+      font-size: 1rem;
       padding: 0.5rem 1rem;
       border: 1px solid #667eea;
       border-radius: 20px;
