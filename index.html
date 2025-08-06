@@ -91,6 +91,26 @@
       opacity: 0.9;
     }
 
+    .header .about-text {
+      color: white;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .header .about-text a {
+      color: #f0f4ff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .header .about-text a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
     .profile-image {
       width: 200px;
       height: 200px;
@@ -110,6 +130,8 @@
       gap: 1.5rem;
       justify-content: center;
       margin-top: 2rem;
+      position: relative;
+      z-index: 2;
     }
 
     .social-links a {
@@ -121,6 +143,9 @@
       background: rgba(255, 255, 255, 0.1);
       text-decoration: none;
       display: inline-block;
+      cursor: pointer;
+      position: relative;
+      z-index: 3;
     }
 
     .social-links a:hover {
@@ -468,7 +493,7 @@
             I also completed a research internship with the <a href="https://compai-lab.github.io/">COMPAI Lab</a> at King's College London, working under the supervision of <a href="https://compai-lab.github.io/author/julia-a.-schnabel/">Prof. Julia Schnabel</a>, <a href="https://compai-lab.github.io/author/veronika-zimmer/">Dr. Veronika Zimmer</a>, and <a href="https://ci.bercea.net/">Dr. Cosmin Bercea</a>. This collaboration focused on unsupervised representation learning for Alzheimer's disease, resulting in innovative approaches to medical image analysis.
           </p>
           <p class="about-text">
-            Currently, I am pursuing my PhD at King's College London under the supervision of <a href="https://www.kcl.ac.uk/people/jorge-cardoso">Dr. Jorge Cardoso</a>, where I am developing AI-based smart orchestration systems for medical imaging workflows. My research aims to create intelligent systems that can automatically optimize imaging protocols, improve image quality, and enhance diagnostic accuracy across various medical imaging modalities.
+            Currently, I am pursuing my PhD at King's College London under the supervision of <a href="https://www.kcl.ac.uk/people/jorge-cardoso">Dr. Jorge Cardoso</a>, and <a href="https://www.kcl.ac.uk/people/sebastien-ourselin">Prof. Sebastien Ourselin</a>, where I am developing AI-based smart orchestration systems for medical imaging workflows. My research aims to create intelligent systems that can automatically optimize imaging protocols, enhance diagnostic accuracy across various medical imaging modalities.
           </p>
         </div>
 
