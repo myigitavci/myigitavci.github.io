@@ -1,529 +1,725 @@
 <!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <title>Mehmet Yigit Avci</title>
-  
-  <meta name="author" content="Jon Barron">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Mehmet Yigit Avci - Medical AI Researcher</title>
+  <meta name="author" content="Mehmet Yigit Avci">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="icon" type="image/png" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #2d3748;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .main-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .profile-section {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .profile-info {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .name {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #fff, #f0f4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-image:hover {
+      transform: scale(1.05);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .social-links a {
+      color: white;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      padding: 0.5rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .social-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .content {
+      padding: 3rem 2rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 2px;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4a5568;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .about-text a:hover {
+      color: #764ba2;
+    }
+
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .interest-item {
+      background: #f7fafc;
+      padding: 1rem;
+      border-radius: 10px;
+      border-left: 4px solid #667eea;
+      transition: all 0.3s ease;
+    }
+
+    .interest-item:hover {
+      background: #edf2f7;
+      transform: translateX(5px);
+    }
+
+    .education-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: #f7fafc;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .education-item:hover {
+      background: #edf2f7;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .education-icon {
+      font-size: 1.5rem;
+      color: #667eea;
+      min-width: 40px;
+    }
+
+    .education-details h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 0.25rem;
+    }
+
+    .education-details p {
+      color: #718096;
+      font-size: 0.95rem;
+    }
+
+    .education-year {
+      color: #667eea;
+      font-weight: 500;
+    }
+
+    .updates-list {
+      list-style: none;
+    }
+
+    .update-item {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: #f7fafc;
+      border-radius: 10px;
+      border-left: 4px solid #667eea;
+      transition: all 0.3s ease;
+    }
+
+    .update-item:hover {
+      background: #edf2f7;
+      transform: translateX(5px);
+    }
+
+    .update-date {
+      font-weight: 600;
+      color: #667eea;
+      margin-bottom: 0.5rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-image {
+      transform: scale(1.05);
+    }
+
+    .project-content {
+      padding: 1.5rem;
+    }
+
+    .project-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+
+    .project-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .project-title a:hover {
+      color: #667eea;
+    }
+
+    .project-authors {
+      color: #718096;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-links a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid #667eea;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .project-links a:hover {
+      background: #667eea;
+      color: white;
+    }
+
+    .project-description {
+      color: #4a5568;
+      line-height: 1.6;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: #718096;
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      
+      .header {
+        padding: 2rem 1rem;
+      }
+      
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .name {
+        font-size: 2.5rem;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .content {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <a name="top"></a>
-  <table style="width:100%;max-width:850px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name><span class="name">Mehmet Yigit Avci</span></name>
-              </p>
-              <p style="text-align:justify">
-                I am a PhD student at <a href="https://www.kcl.ac.uk/">King's College London</a>, funded by <a href="https://www.drive-health.org.uk/">DRIVE-Health</a> and <a href="https://www.deepc.ai/">deepc</a>.
-              </p>
-              <p style="text-align:justify">
-                I earned my BSc in Electrical & Electronics Engineering from <a href="https://www.boun.edu.tr/en-US/Index">Bogazici University</a>, where I researched Alzheimer's detection using brain connectomes in <a href="https://vavlab.boun.edu.tr/">VAVlab</a> under the guidance of <a href="https://vavlab.boun.edu.tr/burak-acar-phd">Prof. Burak Acar</a>.
-              </p>
-              <p style="text-align:justify">
-                I have worked with <a href="https://martinos.org/~berkin/">Prof. Berkin Bilgic</a> and <a href="https://birthlab.github.io/pi.html">Prof. Qiyuan Tian</a> at the <a href="https://www.martinos.org/">Athinoula A. Martinos Center for Biomedical Imaging</a>, focusing on the intersection of diffusion MRI and deep learning.
-              </p>
-              <p style="text-align:justify">
-                Additionally, I completed an internship with the <a href="https://compai-lab.github.io/">COMPAI Lab</a> under the supervision of <a href="https://compai-lab.github.io/author/julia-a.-schnabel/">Prof. Julia Schnabel</a>, <a href="https://compai-lab.github.io/author/veronika-zimmer/">Dr. Veronika Zimmer</a>, and <a href="https://ci.bercea.net/">Dr. Cosmin Bercea</a>, working on unsupervised representation learning for Alzheimer's disease.
-              </p>
-              <p style="text-align:justify">
-                Currently, I am supevised by <a href="https://www.kcl.ac.uk/people/jorge-cardoso">Dr. Jorge Cardoso</a> on AI-based smart orchestration for my PhD studies.
-              </p>
-              <p style="text-align:center">              
-                <a href="mailto:yigitavci32@gmail.com"><i class="fas fa-envelope fa-2x"></i></a> &nbsp  &nbsp
-                <a href="data/MehmetYigitAvci_CV_7_Nov_2024.pdf" target="_blank"><i class="ai ai-cv ai-2x"></i></a> &nbsp  &nbsp
-                <a href="https://linkedin.com/in/mehmet-yigit-avci" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a> &nbsp  &nbsp
-                <a href="https://scholar.google.com/citations?user=G-x5LvkAAAAJ&hl=en"><i class="ai ai-google-scholar ai-2x"></i></a> &nbsp &nbsp
-                <a href="https://github.com/myigitavci" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/YigitAvci_circlee.JPG" class="hoverZoomLink">   
-            </td>
-          </tr>
-        </tbody></table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <strong>Research Interests</strong>
-            <p>
-              <i class="fas fa-chevron-right fa-1x"></i>  Medical Image Analysis, MRI, Deep Learning, Unsupervised Learning, Multi-Modal Learning
+  <div class="container">
+    <div class="main-card">
+      <div class="header">
+        <div class="profile-section">
+          <div class="profile-info">
+            <h1 class="name">Mehmet Yigit Avci</h1>
+            <p class="title">Medical AI Researcher & PhD Student</p>
+            <p class="about-text">
+              I am a PhD student at <a href="https://www.kcl.ac.uk/">King's College London</a>, funded by <a href="https://www.drive-health.org.uk/">DRIVE-Health</a> and <a href="https://www.deepc.ai/">deepc</a>. My research focuses on AI-based smart orchestration for medical imaging.
             </p>
-          </td>
-          </tr>
-        </tbody></table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <strong>Education</strong>
-            <p>
-              <i class="fas fa-graduation-cap fa-1x"></i> PhD, <b>King's College London</b>   
-              <span style="float:right;">
-                2024-2028
-              </span>
-              <br>
-              <br>
-              <i class="fas fa-graduation-cap fa-1x"></i> Msc. in Biomedical Computing, <b>TUM</b>   
-              <span style="float:right;">
-                2022-2024
-              </span>
-              <br>
-              <br>
-              <i class="fas fa-graduation-cap fa-1x"></i> Bsc. in Electrical and Electronics Engineering, <b>Bogazici University</b>
-              <span style="float:right;">
-                2017-2022
-              </span>
-            </p>
-          </td>
-          </tr>
-        </tbody></table>
-
-        <!-- UPDATES -->
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <strong>Updates</strong>
-            <p>
-              <b>October 2024</b> - Started my PhD at King's College.
-              <br>
-              <br>
-              <b>October 2024</b> - Finished my my Master's Degree in Biomedical Computing at TUM!
-              <br>
-              <br>
-              <b>October 2024</b> - Received Best Paper Award for our work on Unsupervised Alzheimer's Disease Analysis in MICCAI EMERGE Workshop!
-              <br>
-              <br>
-              <b>September 2022</b> - Started at TUM for my Master's Degree in Biomedical Computing.
-              <br>
-              <br>
-              <b>September 2022</b> - Started working as a Machine Learning Intern at deepc, working on benchmarking radiology AI, detection of body part with deep learning and NLP solutions.
-              <br>
-              <br>
-              <b>June 2022</b> - Graduated from Bogazici University with a BSc degree Electrical and Electronics Engineering.
-              <br>
-              <br>
-              <b>May 2022</b> - Presented my first abstract in ISMRM 2022.
-            </p>
-          </td>
-          </tr>
-        </tbody></table>
-
-        <!-- PUBLICATIONS -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <strong>Projects</strong>
-          </td>
-        </tr>
-      </tbody></table>
-
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one">
-              <img src='images/morphaues.gif' width="200">
-            </div>
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle">
-            <!-- <a href="https://waymo.com/research/block-nerf/">
-              <papertitle>NeRF-Supervision: Learning Dense Object Descriptors from Neural Radiance Fields</papertitle>
-            </a> -->
-            <a href="https://arxiv.org/abs/2407.03863">
-              <papertitle> Unsupervised Analysis of Alzheimer's Disease Signatures using 3D Deformable Autoencoders</papertitle>
-            </a>
-            
-            <br>
-            <br>
-            <!-- <a href="https://yenchenlin.me/">Lin Yen-Chen</a>, 
-            <a href="http://www.peteflorence.com/">Pete Florence</a>,  -->
-            Mehmet Yigit Avci*, Emily Chan*, Veronika A Zimmer, Daniel Rueckert, Benedikt Wiestler, Julia A Schnabel, Cosmin I. Bercea
-            <!-- <a href="https://scholar.google.com/citations?user=_BPdgV0AAAAJ&hl=en">Tsung-Yi Lin</a>, 
-            <a href="https://meche.mit.edu/people/faculty/ALBERTOR@MIT.EDU">Alberto Rodriguez</a>,
-            <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> -->
-            <!-- <br>
-            <em>ICRA</em>, 2022   -->
-
-
-            <p></p>
-            <a href="https://github.com/ci-ber/MORPHADE">[code]</a>
-            <a href="https://arxiv.org/abs/2407.03863">[arXiv]</a>
-            <p style="text-align:justify">
-              We present MORPHADE (Morphological Autoencoders for Alzheimer's Disease Detection), a novel unsupervised learning approach which uses deformations to allow the analysis of 3D T1-weighted brain images. To the best of our knowledge, this is the first use of deformations with deep unsupervised learning to not only detect, but also localize and assess the severity of structural changes in the brain due to AD. We believe our framework shows promise as a tool towards improved understanding, monitoring and detection of AD.
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one">
-              <img src='images/neurotest.JPG' width="190">
-            </div>
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle">
-             <a href="https://doi.org/10.1117/1.JMI.11.2.024013">
-              <papertitle> Simulation of acquisition shifts in T2 Flair MR images to stress test AI segmentation networks</papertitle>
-            </a>
-
-            
-            <br>
-            <br>
-            <!-- <a href="https://yenchenlin.me/">Lin Yen-Chen</a>, 
-            <a href="http://www.peteflorence.com/">Pete Florence</a>,  -->
-            Christiane Posselt, Mehmet Yigit Avci, Mehmet Yigitsoy, Patrick Schuenke, Christoph Kolbitsch, Tobias Schaeffter, Stefanie Remmele
-            <!-- <a href="https://scholar.google.com/citations?user=_BPdgV0AAAAJ&hl=en">Tsung-Yi Lin</a>, 
-            <a href="https://meche.mit.edu/people/faculty/ALBERTOR@MIT.EDU">Alberto Rodriguez</a>,
-            <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> -->
-            <!-- <br>
-            <em>ICRA</em>, 2022   -->
-            <br>
-           <em>Journal of Medical Imaging, 2024</em>
-            <br>
-            <a href="https://doi.org/10.1117/1.JMI.11.2.024013">[journal paper]</a>
-            <p></p>
-            <p style="text-align:justify">
-            This work's goal is to provide a simulation framework for routine neuroimaging test data, which allows for "stress testing" of deep segmentation networks against acquisition shifts that commonly occur in clinical practice for T2w FLAIR MRI protocols.
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one">
-              <img src='images/quad.JPG' width="200">
-            </div>
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle">
-            <!-- <a href="https://waymo.com/research/block-nerf/">
-              <papertitle>NeRF-Supervision: Learning Dense Object Descriptors from Neural Radiance Fields</papertitle>
-            </a> -->
-            <a href="https://www.sciencedirect.com/science/article/pii/S2213158223001742">
-              <papertitle> Validation of deep learning techniques for quality augmentation in diffusion MRI for clinical studies</papertitle>
-            </a>
-            
-            <br>
-            <br>
-            <!-- <a href="https://yenchenlin.me/">Lin Yen-Chen</a>, 
-            <a href="http://www.peteflorence.com/">Pete Florence</a>,  -->
-            Santiago Aja-Fernandez,...Mehmet Yigit Avci, Zihan Li, Berkin Bilgic, Qiyuan Tian,... Tomasz Pieciak
-            <!-- <a href="https://scholar.google.com/citations?user=_BPdgV0AAAAJ&hl=en">Tsung-Yi Lin</a>, 
-            <a href="https://meche.mit.edu/people/faculty/ALBERTOR@MIT.EDU">Alberto Rodriguez</a>,
-            <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> -->
-            <!-- <br>
-            <em>ICRA</em>, 2022   -->
-            <br>
-           <em>ISMRM 2023, NeuroImage: Clinical, 2023</em>
-            <br>
-            <a href="https://www.sciencedirect.com/science/article/pii/S2213158223001742">[journal paper]</a>
-            <a href="https://www.lpi.tel.uva.es/quad22/Results.html">[QUAD results]</a>  
-            <p></p>
-            <p style="text-align:justify">
-              Participated in <a href="https://www.lpi.tel.uva.es/quad22/index.html">QUAD Challenge in MICCAI 2022 </a> and got the 4th place with combination of methods <a href="https://arxiv.org/abs/2112.01587">DUnet </a> and <a href="https://github.com/qiyuantian/DeepDTI">deepDTI</a>.
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one">
-              <img src='images/dunet.JPG' width="200">
-            </div>
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle">
-            <!-- <a href="https://waymo.com/research/block-nerf/">
-              <papertitle>NeRF-Supervision: Learning Dense Object Descriptors from Neural Radiance Fields</papertitle>
-            </a> -->
-            <a href="https://arxiv.org/abs/2112.01587">
-              <papertitle><b>DUnet</b>: Quantifying the uncertainty of neural networks using Monte Carlo dropout for safer and more accurate deep learning based quantitative MRI</papertitle>
-            </a>
-            <br>
-            <br>
-            <!-- <a href="https://yenchenlin.me/">Lin Yen-Chen</a>, 
-            <a href="http://www.peteflorence.com/">Pete Florence</a>,  -->
-            M Yigit Avci, Z Li, Q Fan, S Huang, B Bilgic, Q Tian
-            <!-- <a href="https://scholar.google.com/citations?user=_BPdgV0AAAAJ&hl=en">Tsung-Yi Lin</a>, 
-            <a href="https://meche.mit.edu/people/faculty/ALBERTOR@MIT.EDU">Alberto Rodriguez</a>,
-            <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> -->
-            <!-- <br>
-            <em>ICRA</em>, 2022   -->
-            <br>
-           <em>ISMRM 2022</em>
-            <br>            <a href="https://github.com/myigitavci/dropout_ISMRM">[code]</a>
-            <a href="https://arxiv.org/abs/2112.01587">[arXiv]</a>  
-            <p></p>
-            <p style="text-align:justify">
-              Dropout is conventionally used during the training phase as regularization method and for quantifying uncertainty in deep learning. We propose to use dropout during training as well as inference steps, and average multiple predictions to improve the accuracy, while reducing and quantifying the uncertainty. With our method, accuracy can be improved significantly compared to network outputs without dropout, especially when the training dataset is small. Moreover, confidence maps are generated which may aid in diagnosis of unseen pathology or artifacts.
-            </p>
-          </td>
-        </tr>
-       
-      </tbody></table>
-        
-        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Recent Publications</heading>
-            </td>
-          </tr>
-        </tbody></table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-          <tr onmouseout="nerfsuper_stop()" onmouseover="nerfsuper_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='nerfsuper_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/nerf_supervision.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/nerf_supervision.jpg' width="160">
-              </div>
-              <script type="text/javascript">
-                function nerfsuper_start() {
-                  document.getElementById('nerfsuper_image').style.opacity = "1";
-                }
-
-                function nerfsuper_stop() {
-                  document.getElementById('nerfsuper_image').style.opacity = "0";
-                }
-                nerfsuper_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-							<a href="https://waymo.com/research/block-nerf/">
-                <papertitle>NeRF-Supervision: Learning Dense Object Descriptors from Neural Radiance Fields</papertitle>
-              </a>
-              <br>
-              <a href="https://yenchenlin.me/">Lin Yen-Chen</a>, 
-              <a href="http://www.peteflorence.com/">Pete Florence</a>, 
-              <strong>Jonathan T. Barron</strong>,  <br>
-              <a href="https://scholar.google.com/citations?user=_BPdgV0AAAAJ&hl=en">Tsung-Yi Lin</a>, 
-              <a href="https://meche.mit.edu/people/faculty/ALBERTOR@MIT.EDU">Alberto Rodriguez</a>,
-              <a href="http://web.mit.edu/phillipi/">Phillip Isola</a>
-              <br>
-              <em>ICRA</em>, 2022  
-              <br>
-							<a href="http://yenchenlin.me/nerf-supervision/">project page</a> / 
-							<a href="https://arxiv.org/abs/2203.01913">arXiv</a> / 
-							<a href="https://www.youtube.com/watch?v=_zN-wVwPH1s">video</a> /
-							<a href="https://github.com/yenchenlin/nerf-supervision-public">code</a> / 
-							<a href="https://colab.research.google.com/drive/13ISri5KD2XeEtsFs25hmZtKhxoDywB5y?usp=sharing">colab</a>				
-              <p></p>
-              <p>NeRF works better than RGB-D cameras or multi-view stereo when learning object descriptors.</p>
-            </td>
-          </tr>
-					
-          <tr onmouseout="mip360_stop()" onmouseover="mip360_start()"  bgcolor="#ffffd0">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='mip360_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/mip360_sat.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/mip360_sat.jpg' width="160">
-              </div>
-              <script type="text/javascript">
-                function mip360_start() {
-                  document.getElementById('mip360_image').style.opacity = "1";
-                }
-
-                function mip360_stop() {
-                  document.getElementById('mip360_image').style.opacity = "0";
-                }
-                mip360_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="http://jonbarron.info/mipnerf360">
-                <papertitle>Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields</papertitle>
-              </a>
-              <br>
-              <strong>Jonathan T. Barron</strong>,
-              <a href="https://bmild.github.io/">Ben Mildenhall</a>,
-              <a href="https://scholar.harvard.edu/dorverbin/home">Dor Verbin</a>,
-              <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>,
-              <a href="https://phogzone.com/">Peter Hedman</a>
-              <br>
-							<em>CVPR</em>, 2022 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
-              <br>
-              <a href="http://jonbarron.info/mipnerf360">project page</a>
-              /
-              <a href="https://arxiv.org/abs/2111.12077">arXiv</a>
-              /
-              <a href="https://youtu.be/zBSH-k9GbV4">video</a>
-              <p></p>
-              <p>mip-NeRF can be extended to produce realistic results on unbounded scenes.</p>
-            </td>
-          </tr> 
-
-    <tr onmouseout="refnerf_stop()" onmouseover="refnerf_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='refnerf_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/refnerf.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/refnerf.jpg' width="160">
+          </div>
+          <img src="images/YigitAvci_circlee.JPG" alt="Mehmet Yigit Avci" class="profile-image">
         </div>
-        <script type="text/javascript">
-          function refnerf_start() {
-            document.getElementById('refnerf_image').style.opacity = "1";
-          }
+        
+        <div class="social-links">
+          <a href="mailto:yigitavci32@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="data/MehmetYigitAvci_CV_7_Nov_2024.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
+          <a href="https://linkedin.com/in/mehmet-yigit-avci" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=G-x5LvkAAAAJ&hl=en" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://github.com/myigitavci" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
 
-          function refnerf_stop() {
-            document.getElementById('refnerf_image').style.opacity = "0";
-          }
-          refnerf_stop()
-        </script>
-      </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://dorverbin.github.io/refnerf/index.html">
-            <papertitle>Ref-NeRF: Structured View-Dependent Appearance for Neural Radiance Fields</papertitle>
-          </a>
-          <br>
-          <a href="https://scholar.harvard.edu/dorverbin/home">Dor Verbin</a>,
-          <a href="https://phogzone.com/">Peter Hedman</a>,
-          <a href="https://bmild.github.io/">Ben Mildenhall</a>, <br>
-          <a href="Todd Zickler">Todd Zickler</a>,
-          <strong>Jonathan T. Barron</strong>,
-          <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>
-          <br>
-    <em>CVPR</em>, 2022 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
-          <br>
-          <a href="https://dorverbin.github.io/refnerf/index.html">project page</a>
-    /
-          <a href="https://arxiv.org/abs/2112.03907">arXiv</a>
-    /
-          <a href="https://youtu.be/qrdRH9irAlk">video</a>
-          <p></p>
-          <p>Explicitly modeling reflections in NeRF produces realistic shiny surfaces and accurate surface normals, and lets you edit materials.</p>
-        </td>
-      </tr>
+      <div class="content">
+        <div class="section">
+          <h2 class="section-title">About Me</h2>
+          <p class="about-text">
+            I earned my BSc in Electrical & Electronics Engineering from <a href="https://www.boun.edu.tr/en-US/Index">Bogazici University</a>, where I researched Alzheimer's detection using brain connectomes in <a href="https://vavlab.boun.edu.tr/">VAVlab</a> under the guidance of <a href="https://vavlab.boun.edu.tr/burak-acar-phd">Prof. Burak Acar</a>.
+          </p>
+          <p class="about-text">
+            I have worked with <a href="https://martinos.org/~berkin/">Prof. Berkin Bilgic</a> and <a href="https://birthlab.github.io/pi.html">Prof. Qiyuan Tian</a> at the <a href="https://www.martinos.org/">Athinoula A. Martinos Center for Biomedical Imaging</a>, focusing on the intersection of diffusion MRI and deep learning.
+          </p>
+          <p class="about-text">
+            Additionally, I completed an internship with the <a href="https://compai-lab.github.io/">COMPAI Lab</a> under the supervision of <a href="https://compai-lab.github.io/author/julia-a.-schnabel/">Prof. Julia Schnabel</a>, <a href="https://compai-lab.github.io/author/veronika-zimmer/">Dr. Veronika Zimmer</a>, and <a href="https://ci.bercea.net/">Dr. Cosmin Bercea</a>, working on unsupervised representation learning for Alzheimer's disease.
+          </p>
+          <p class="about-text">
+            Currently, I am supervised by <a href="https://www.kcl.ac.uk/people/jorge-cardoso">Dr. Jorge Cardoso</a> on AI-based smart orchestration for my PhD studies.
+          </p>
+        </div>
 
-          <tr onmouseout="rawnerf_stop()" onmouseover="rawnerf_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='rawnerf_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/rawnerf.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/rawnerf.jpg' width="160">
+        <div class="section">
+          <h2 class="section-title">Research Interests</h2>
+          <div class="interests-grid">
+            <div class="interest-item">
+              <i class="fas fa-brain"></i> Medical Image Analysis
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-magnet"></i> MRI & Diffusion Imaging
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-network-wired"></i> Deep Learning
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-search"></i> Unsupervised Learning
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-layer-group"></i> Multi-Modal Learning
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-robot"></i> AI in Healthcare
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Education</h2>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-details">
+              <h3>PhD in Medical AI</h3>
+              <p>King's College London</p>
+              <span class="education-year">2024-2028</span>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-details">
+              <h3>MSc in Biomedical Computing</h3>
+              <p>Technical University of Munich (TUM)</p>
+              <span class="education-year">2022-2024</span>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-details">
+              <h3>BSc in Electrical & Electronics Engineering</h3>
+              <p>Bogazici University</p>
+              <span class="education-year">2017-2022</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Recent Updates</h2>
+          <ul class="updates-list">
+            <li class="update-item">
+              <div class="update-date">October 2024</div>
+              <div>Started my PhD at King's College London</div>
+            </li>
+            <li class="update-item">
+              <div class="update-date">October 2024</div>
+              <div>Finished my Master's Degree in Biomedical Computing at TUM!</div>
+            </li>
+            <li class="update-item">
+              <div class="update-date">October 2024</div>
+              <div>Received Best Paper Award for our work on Unsupervised Alzheimer's Disease Analysis in MICCAI EMERGE Workshop!</div>
+            </li>
+            <li class="update-item">
+              <div class="update-date">September 2022</div>
+              <div>Started at TUM for my Master's Degree in Biomedical Computing</div>
+            </li>
+            <li class="update-item">
+              <div class="update-date">September 2022</div>
+              <div>Started working as a Machine Learning Intern at deepc, working on benchmarking radiology AI, detection of body part with deep learning and NLP solutions</div>
+            </li>
+            <li class="update-item">
+              <div class="update-date">June 2022</div>
+              <div>Graduated from Bogazici University with a BSc degree in Electrical and Electronics Engineering</div>
+            </li>
+            <li class="update-item">
+              <div class="update-date">May 2022</div>
+              <div>Presented my first abstract in ISMRM 2022</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Research Projects</h2>
+          <div class="projects-grid">
+
+            <div class="project-card">
+              <img src="images/MR-CLIP-small.png" alt="MR-CLIP" class="project-image">
+              <div class="project-content">
+                <h3 class="project-title">
+                  <a href="https://www.arxiv.org/abs/2507.00043">MR-CLIP: Efficient Metadata-Guided Learning of MRI Contrast Representations
+                  </a>
+                </h3>
+                <p class="project-authors">Mehmet Yigit Avci, Pedro Borges, Paul Wright, Mehmet Yigitsoy, Sebastien Ourselin, Jorge Cardoso</p>
+                <div class="project-links">
+                  <a href="https://www.arxiv.org/abs/2507.00043">arXiv</a>
+                  <a href="https://github.com/myigitavci/MR-CLIP">Code</a>
+                </div>
+                <p class="project-description">
+                  MR-CLIP is a multimodal contrastive learning framework that aligns MR images with their DICOM metadata to learn contrast-aware representations without requiring manual labels. Trained on diverse clinical data, it enables robust, anatomy-invariant representations for tasks like cross-modal retrieval and contrast classification, even in the presence of incomplete or noisy metadata.
+                </p>
               </div>
-              <script type="text/javascript">
-                function rawnerf_start() {
-                  document.getElementById('rawnerf_image').style.opacity = "1";
-                }
+            </div>
 
-                function rawnerf_stop() {
-                  document.getElementById('rawnerf_image').style.opacity = "0";
-                }
-                rawnerf_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://bmild.github.io/rawnerf/index.html">
-                <papertitle>NeRF in the Dark: High Dynamic Range View Synthesis from Noisy Raw Images</papertitle>
-              </a>
-              <br>
-              <a href="https://bmild.github.io/">Ben Mildenhall</a>,
-              <a href="https://phogzone.com/">Peter Hedman</a>,
-              <a href="http://www.ricardomartinbrualla.com/">Ricardo Martin-Brualla</a>, <br>
-              <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>,
-              <strong>Jonathan T. Barron</strong>
-              <br>
-							<em>CVPR</em>, 2022 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
-              <br>
-              <a href="https://bmild.github.io/rawnerf/index.html">project page</a>
-        /
-              <a href="https://arxiv.org/abs/2111.13679">arXiv</a>
-        /
-              <a href="https://www.youtube.com/watch?v=JtBS4KBcKVc">video</a>
-              <p></p>
-              <p>
-								Properly training NeRF on raw camera data enables HDR view synthesis and bokeh, and outperforms multi-image denoising.</p>
-            </td>
-          </tr> 
-				
-        </tbody></table> -->
+            <div class="project-card">
+              <img src="images/ZS-PRIME.png" alt="ZS-PRIME" class="project-image">
+              <div class="project-content">
+                <h3 class="project-title">
+                  <a href="https://submissions.mirasmart.com/ISMRM2025/ViewSubmissionTeaser.aspx">Zero-Shot Self-Supervised Distortion-Free Diffusion MRI Reconstruction</a>
+                </h3>
+                <p class="project-authors">Mehmet Yigit Avci, Jaejin Cho, Yohan Jun, Berkin Bilgic</p>
+                <div class="project-links">
+                  <a href="https://submissions.mirasmart.com/ISMRM2025/ViewSubmissionTeaser.aspx">ISMRM 2025</a>
+                  <a href="https://github.com/myigitavci/zs-prime">Code</a>
+                </div>
+                <p class="project-description">
+                  ZS-PRIME combines advanced field map estimation (PRIME) with zero-shot self-supervised training, achieving distortion-free, high-resolution multi-shot diffusion MRI from undersampled data. This obviates the dependency on external training datasets, setting a new benchmark for efficient, high-fidelity diffusion MRI.
+                </p>
+              </div>
+            </div>
 
-      <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-        <tr>
-          <td>
-            <heading>Misc</heading>
-          </td>
-        </tr>
-      </tbody></table>
+            <div class="project-card">
+              <img src="images/morphaues.gif" alt="MORPHADE Project" class="project-image">
+              <div class="project-content">
+                <h3 class="project-title">
+                  <a href="https://arxiv.org/abs/2407.03863">Unsupervised Analysis of Alzheimer's Disease Signatures using 3D Deformable Autoencoders</a>
+                </h3>
+                <p class="project-authors">Mehmet Yigit Avci*, Emily Chan*, Veronika A Zimmer, Daniel Rueckert, Benedikt Wiestler, Julia A Schnabel, Cosmin I. Bercea</p>
+                <div class="project-links">
+                  <a href="https://github.com/ci-ber/MORPHADE">Code</a>
+                  <a href="https://arxiv.org/abs/2407.03863">arXiv</a>
+                </div>
+                <p class="project-description">
+                  We present MORPHADE (Morphological Autoencoders for Alzheimer's Disease Detection), a novel unsupervised learning approach which uses deformations to allow the analysis of 3D T1-weighted brain images. To the best of our knowledge, this is the first use of deformations with deep unsupervised learning to not only detect, but also localize and assess the severity of structural changes in the brain due to AD.
+                </p>
+              </div>
+            </div>
 
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-					
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/cvf.jpg"></td>
-            <td width="75%" valign="center">
-              <a href="https://cvpr2022.thecvf.com/area-chairs">Area Chair, CVPR 2022</a>
-              <br>
-              <a href="http://cvpr2021.thecvf.com/area-chairs">Area Chair & Longuet-Higgins Award Committee Member, CVPR 2021</a>
-              <br>
-              <a href="http://cvpr2019.thecvf.com/area_chairs">Area Chair, CVPR 2019</a>
-              <br>
-              <a href="http://cvpr2018.thecvf.com/organizers/area_chairs">Area Chair, CVPR 2018</a>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/cs188.jpg" alt="cs188">
-            </td>
-            <td width="75%" valign="center">
-              <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
-              <br>
-              <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
-              <br>
-              <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
-            </td>
-          </tr>
-					
+            <div class="project-card">
+              <img src="images/neurotest.JPG" alt="NeuroTest Project" class="project-image">
+              <div class="project-content">
+                <h3 class="project-title">
+                  <a href="https://doi.org/10.1117/1.JMI.11.2.024013">Simulation of acquisition shifts in T2 Flair MR images to stress test AI segmentation networks</a>
+                </h3>
+                <p class="project-authors">Christiane Posselt, Mehmet Yigit Avci, Mehmet Yigitsoy, Patrick Schuenke, Christoph Kolbitsch, Tobias Schaeffter, Stefanie Remmele</p>
+                <div class="project-links">
+                  <a href="https://doi.org/10.1117/1.JMI.11.2.024013">Journal Paper</a>
+                </div>
+                <p class="project-description">
+                  This work's goal is to provide a simulation framework for routine neuroimaging test data, which allows for "stress testing" of deep segmentation networks against acquisition shifts that commonly occur in clinical practice for T2w FLAIR MRI protocols.
+                </p>
+              </div>
+            </div>
 
-          <tr>
-            <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-							<heading>Basically <br> Blog Posts</heading>
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://arxiv.org/abs/2112.11687">Squareplus: A Softplus-Like Algebraic Rectifier</a>
-              <br>
-              <a href="https://arxiv.org/abs/2010.09714">A Convenient Generalization of Schlick's Bias and Gain Functions</a>
-              <br>
-              <a href="https://arxiv.org/abs/1704.07483">Continuously Differentiable Exponential Linear Units</a>
-            </td>
-          </tr>
-					
-        </tbody></table> -->
+            <div class="project-card">
+              <img src="images/quad.JPG" alt="QUAD Challenge" class="project-image">
+              <div class="project-content">
+                <h3 class="project-title">
+                  <a href="https://www.sciencedirect.com/science/article/pii/S2213158223001742">Validation of deep learning techniques for quality augmentation in diffusion MRI for clinical studies</a>
+                </h3>
+                <p class="project-authors">Santiago Aja-Fernandez,...Mehmet Yigit Avci, Zihan Li, Berkin Bilgic, Qiyuan Tian,... Tomasz Pieciak</p>
+                <div class="project-links">
+                  <a href="https://www.sciencedirect.com/science/article/pii/S2213158223001742">Journal Paper</a>
+                  <a href="https://www.lpi.tel.uva.es/quad22/Results.html">QUAD Results</a>
+                </div>
+                <p class="project-description">
+                  Participated in <a href="https://www.lpi.tel.uva.es/quad22/index.html">QUAD Challenge in MICCAI 2022</a> and got the 4th place with combination of methods <a href="https://arxiv.org/abs/2112.01587">DUnet</a> and <a href="https://github.com/qiyuantian/DeepDTI">deepDTI</a>.
+                </p>
+              </div>
+            </div>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;font-size:small;">
-                <span style="float:left;">
-                  <a href="#top"><i class="fas fa-chevron-up fa-2x"></i></a>
-                </span>
-                Template is from Jon Barron's awesome <a href="https://jonbarron.info/" target="_blank">website</a>.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
+            <div class="project-card">
+              <img src="images/dunet.JPG" alt="DUnet Project" class="project-image">
+              <div class="project-content">
+                <h3 class="project-title">
+                  <a href="https://arxiv.org/abs/2112.01587"><b>DUnet</b>: Quantifying the uncertainty of neural networks using Monte Carlo dropout for safer and more accurate deep learning based quantitative MRI</a>
+                </h3>
+                <p class="project-authors">M Yigit Avci, Z Li, Q Fan, S Huang, B Bilgic, Q Tian</p>
+                <div class="project-links">
+                  <a href="https://github.com/myigitavci/dropout_ISMRM">Code</a>
+                  <a href="https://arxiv.org/abs/2112.01587">arXiv</a>
+                </div>
+                <p class="project-description">
+                  Dropout is conventionally used during the training phase as regularization method and for quantifying uncertainty in deep learning. We propose to use dropout during training as well as inference steps, and average multiple predictions to improve the accuracy, while reducing and quantifying the uncertainty.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Template inspired by <a href="https://jonbarron.info/" target="_blank">Jon Barron's website</a> | Designed with ❤️ for Medical AI Research</p>
+    </div>
+  </div>
+
+  <a href="#top" class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <script>
+    // Back to top functionality
+    window.addEventListener('scroll', function() {
+      const backToTop = document.getElementById('backToTop');
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Add animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(30px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+  </script>
 </body>
-
 </html>	
