@@ -376,30 +376,46 @@
 
     .updates-list {
       list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.9rem;
     }
 
     .update-item {
-      padding: 1rem;
-      margin-bottom: 1rem;
+      padding: 0.85rem 1rem;
       background: #ffffff;
       border-radius: 12px;
       border: 1px solid #e2e8f0;
-      border-left: 4px solid #4338ca;
-      transition: all 0.25s ease;
-      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+      transition: all 0.2s ease;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.6rem;
+      align-items: center;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
     }
 
     .update-item:hover {
       background: #f8fafc;
-      transform: translateY(-2px);
-      border-color: #6d28d9;
+      transform: translateY(-1px);
+      border-color: #d7def0;
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
     }
 
     .update-date {
       font-weight: 700;
       color: #4338ca;
-      margin-bottom: 0.4rem;
       letter-spacing: -0.2px;
+      font-size: 0.95rem;
+      padding: 0.35rem 0.55rem;
+      border-radius: 10px;
+      background: rgba(67, 56, 202, 0.08);
+      border: 1px solid rgba(67, 56, 202, 0.12);
+    }
+
+    .update-text {
+      color: #1f2937;
+      line-height: 1.5;
+      font-weight: 600;
     }
 
     .projects-grid {
@@ -624,7 +640,7 @@
           
           <div class="social-links">
             <a href="mailto:yigitavci32@gmail.com" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="data/MehmetYigitAvci_CV_6_aug_2025.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
+            <a href="data/MehmetYigitAvci_CV_11_dec_2025.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
             <a href="https://linkedin.com/in/mehmet-yigit-avci" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="https://scholar.google.com/citations?user=G-x5LvkAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
             <a href="https://github.com/myigitavci" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
@@ -710,40 +726,40 @@
             <h2 class="section-title">Recent Updates</h2>
             <ul class="updates-list">
               <li class="update-item">
-                <div class="update-date">July 2025</div>
-                <div>MR-CLIP accepted at MICCAI MLMI Workshop 2025</div>
+                <div class="update-date">Jul 2025</div>
+                <div class="update-text">MR-CLIP accepted at MICCAI MLMI Workshop 2025</div>
               </li>
               <li class="update-item">
-                <div class="update-date">April 2025</div>
-                <div>Presented ZS-PRIME at ISMRM 2025</div>
+                <div class="update-date">Apr 2025</div>
+                <div class="update-text">Presented ZS-PRIME at ISMRM 2025</div>
               </li>
               <li class="update-item">
-                <div class="update-date">October 2024</div>
-                <div>Started my PhD at King's College London</div>
+                <div class="update-date">Oct 2024</div>
+                <div class="update-text">Started PhD at King's College London</div>
               </li>
               <li class="update-item">
-                <div class="update-date">October 2024</div>
-                <div>Finished my Master's Degree in Biomedical Computing at TUM!</div>
+                <div class="update-date">Oct 2024</div>
+                <div class="update-text">Finished MSc in Biomedical Computing at TUM</div>
               </li>
               <li class="update-item">
-                <div class="update-date">October 2024</div>
-                <div>Received Best Paper Award for our work on Unsupervised Alzheimer's Disease Analysis in MICCAI EMERGE Workshop!</div>
+                <div class="update-date">Oct 2024</div>
+                <div class="update-text">Best Paper — Unsupervised AD Analysis (MICCAI EMERGE)</div>
               </li>
               <li class="update-item">
-                <div class="update-date">September 2022</div>
-                <div>Started at TUM for my Master's Degree in Biomedical Computing</div>
+                <div class="update-date">Sep 2022</div>
+                <div class="update-text">Started MSc Biomedical Computing at TUM</div>
               </li>
               <li class="update-item">
-                <div class="update-date">September 2022</div>
-                <div>Started working as a Machine Learning Intern at deepc, working on benchmarking radiology AI, detection of body part with deep learning and NLP solutions</div>
+                <div class="update-date">Sep 2022</div>
+                <div class="update-text">Joined deepc as ML Intern (radiology AI benchmarking & NLP)</div>
               </li>
               <li class="update-item">
-                <div class="update-date">June 2022</div>
-                <div>Graduated from Bogazici University with a BSc degree in Electrical and Electronics Engineering</div>
+                <div class="update-date">Jun 2022</div>
+                <div class="update-text">Graduated BSc Electrical & Electronics Engineering, Bogazici</div>
               </li>
               <li class="update-item">
                 <div class="update-date">May 2022</div>
-                <div>Presented my first abstract in ISMRM 2022</div>
+                <div class="update-text">Presented first abstract at ISMRM 2022</div>
               </li>
             </ul>
           </div>
