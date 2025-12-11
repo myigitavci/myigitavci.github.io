@@ -26,26 +26,106 @@
       min-height: 100vh;
     }
 
-    .container {
-      max-width: 1200px;
+    .page {
+      display: flex;
+      min-height: 100vh;
+      gap: 1.5rem;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 2rem;
     }
 
+    .sidebar {
+      position: sticky;
+      top: 1.5rem;
+      align-self: flex-start;
+      width: 280px;
+      background: #111827;
+      color: #e5e7eb;
+      border-radius: 18px;
+      padding: 1.75rem;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      height: fit-content;
+    }
+
+    .sidebar .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+
+    .sidebar .role {
+      color: #9ca3af;
+      margin-bottom: 1.5rem;
+    }
+
+    .nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      padding: 0.75rem 0.9rem;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+      display: block;
+    }
+
+    .nav a:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      transform: translateX(4px);
+    }
+
+    .sidebar .contact {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.6rem;
+    }
+
+    .sidebar .contact a {
+      color: #e5e7eb;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0.65rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sidebar .contact a:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .container {
+      flex: 1;
+      min-width: 0;
+    }
+
     .main-card {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(10px);
       border-radius: 20px;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
       overflow: hidden;
       margin-bottom: 2rem;
+      border: 1px solid #e5e7eb;
     }
 
     .header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
       color: white;
-      padding: 3rem 2rem;
-      text-align: center;
+      padding: 3rem 2.5rem;
+      text-align: left;
       position: relative;
       overflow: hidden;
     }
@@ -64,11 +144,10 @@
     .profile-section {
       position: relative;
       z-index: 1;
-      display: flex;
+      display: grid;
+      grid-template-columns: auto 220px;
       align-items: center;
-      justify-content: center;
-      gap: 3rem;
-      flex-wrap: wrap;
+      gap: 2rem;
     }
 
     .profile-info {
@@ -112,24 +191,25 @@
     }
 
     .profile-image {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
+      width: 220px;
+      height: 220px;
+      border-radius: 18px;
       object-fit: cover;
-      border: 4px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
+      border: 3px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .profile-image:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
     }
 
     .social-links {
       display: flex;
       gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
+      justify-content: flex-start;
+      margin-top: 1.5rem;
       position: relative;
       z-index: 2;
     }
@@ -138,27 +218,27 @@
       color: white;
       font-size: 1.3rem;
       transition: all 0.3s ease;
-      padding: 0.8rem;
-      border-radius: 8px;
+      padding: 0.75rem;
+      border-radius: 10px;
       background: rgba(255, 255, 255, 0.15);
       text-decoration: none;
       display: inline-block;
       cursor: pointer;
       position: relative;
       z-index: 3;
-      min-width: 50px;
+      min-width: 48px;
       text-align: center;
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .social-links a:hover {
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.22);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
     }
 
     .content {
-      padding: 3rem 2rem;
+      padding: 3rem 2.5rem;
     }
 
     .section {
@@ -178,12 +258,13 @@
     }
 
     .section-title {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #2d3748;
-      margin-bottom: 1.5rem;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1.2rem;
       position: relative;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.35rem;
+      letter-spacing: -0.3px;
     }
 
     .section-title::after {
@@ -193,7 +274,7 @@
       left: 0;
       width: 60px;
       height: 3px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
       border-radius: 2px;
     }
 
@@ -303,30 +384,35 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 1.5rem;
     }
 
     .project-card {
-      background: white;
-      border-radius: 15px;
+      background: #fff;
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+      transition: all 0.25s ease;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
     }
 
     .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
     }
 
     .project-image {
       width: 100%;
-      height: 250px;
+      height: 220px;
       object-fit: contain;
       background: #f8f9fa;
       padding: 1rem;
       transition: transform 0.3s ease;
+      border-bottom: 1px solid #e5e7eb;
     }
 
     .project-card:hover .project-image {
@@ -431,287 +517,339 @@
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
 
-    @media (max-width: 768px) {
-      .container {
-        padding: 1rem;
-      }
-      
-      .header {
-        padding: 2rem 1rem;
-      }
-      
-      .profile-section {
+    @media (max-width: 992px) {
+      .page {
         flex-direction: column;
+        padding: 1.25rem;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+      }
+
+      .sidebar .contact {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .profile-section {
+        grid-template-columns: 1fr;
         text-align: center;
+        justify-items: center;
       }
-      
-      .name {
-        font-size: 2.5rem;
+
+      .social-links {
+        justify-content: center;
       }
-      
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 2rem 1.25rem;
+      }
+
       .projects-grid {
         grid-template-columns: 1fr;
       }
-      
+
       .content {
-        padding: 2rem 1rem;
+        padding: 2rem 1.25rem;
+      }
+
+      .sidebar .contact {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="main-card">
-      <div class="header">
-        <div class="profile-section">
-          <div class="profile-info">
-            <h1 class="name">Mehmet Yigit Avci</h1>
-            <p class="title">Medical AI Researcher & PhD Student</p>
+  <div class="page" id="top">
+    <aside class="sidebar">
+      <div class="logo">Mehmet Yigit Avci</div>
+      <div class="role">Medical AI Researcher &amp; PhD Student</div>
+      <ul class="nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#interests">Research Interests</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+      <div class="contact">
+        <a href="mailto:yigitavci32@gmail.com" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="data/MehmetYigitAvci_CV_6_aug_2025.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
+        <a href="https://linkedin.com/in/mehmet-yigit-avci" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://scholar.google.com/citations?user=G-x5LvkAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://github.com/myigitavci" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </aside>
+
+    <div class="container">
+      <div class="main-card">
+        <div class="header">
+          <div class="profile-section">
+            <div class="profile-info">
+              <h1 class="name">Mehmet Yigit Avci</h1>
+              <p class="title">Medical AI Researcher &amp; PhD Student</p>
+              <p class="about-text">
+                I am a PhD student at <a href="https://www.kcl.ac.uk/">King's College London</a>, funded by <a href="https://www.drive-health.org.uk/">DRIVE-Health</a> and <a href="https://www.deepc.ai/">deepc</a>. My research focuses on developing AI-powered solutions for medical imaging, with particular emphasis on MRI analysis, unsupervised learning, and multi-modal medical data processing.
+              </p>
+            </div>
+            <img src="images/YigitAvci_circlee.JPG" alt="Mehmet Yigit Avci" class="profile-image">
+          </div>
+          
+          <div class="social-links">
+            <a href="mailto:yigitavci32@gmail.com" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="data/MehmetYigitAvci_CV_6_aug_2025.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
+            <a href="https://linkedin.com/in/mehmet-yigit-avci" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=G-x5LvkAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+            <a href="https://github.com/myigitavci" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="section" id="about">
+            <h2 class="section-title">About Me</h2>
             <p class="about-text">
-              I am a PhD student at <a href="https://www.kcl.ac.uk/">King's College London</a>, funded by <a href="https://www.drive-health.org.uk/">DRIVE-Health</a> and <a href="https://www.deepc.ai/">deepc</a>. My research focuses on developing AI-powered solutions for medical imaging, with particular emphasis on MRI analysis, unsupervised learning, and multi-modal medical data processing.
+              I am passionate about advancing medical AI technologies that can improve patient care and clinical decision-making. My journey in medical imaging began during my undergraduate studies at <a href="https://www.boun.edu.tr/en-US/Index">Bogazici University</a>, where I worked on Alzheimer's disease detection using brain connectomes in the <a href="https://vavlab.boun.edu.tr/">VAVlab</a> under the guidance of <a href="https://vavlab.boun.edu.tr/burak-acar-phd">Prof. Burak Acar</a>.
+            </p>
+            <p class="about-text">
+              During my research career, I have had the privilege of collaborating with leading experts in the field. At the <a href="https://www.martinos.org/">Athinoula A. Martinos Center for Biomedical Imaging</a>, I worked with <a href="https://martinos.org/~berkin/">Prof. Berkin Bilgic</a> and <a href="https://birthlab.github.io/pi.html">Prof. Qiyuan Tian</a> on cutting-edge diffusion MRI techniques and deep learning applications. This experience deepened my understanding of the intersection between advanced imaging technologies and artificial intelligence.
+            </p>
+            <p class="about-text">
+              I also completed a research internship with the <a href="https://compai-lab.github.io/">COMPAI Lab</a> at TUM, working under the supervision of <a href="https://compai-lab.github.io/author/julia-a.-schnabel/">Prof. Julia Schnabel</a>, <a href="https://compai-lab.github.io/author/veronika-zimmer/">Dr. Veronika Zimmer</a>, and <a href="https://ci.bercea.net/">Dr. Cosmin Bercea</a>. This collaboration focused on unsupervised representation learning for Alzheimer's disease, resulting in innovative approaches to medical image analysis.
+            </p>
+            <p class="about-text">
+              Currently, I am pursuing my PhD at King's College London under the supervision of <a href="https://www.kcl.ac.uk/people/jorge-cardoso">Dr. Jorge Cardoso</a>, and <a href="https://www.kcl.ac.uk/people/sebastien-ourselin">Prof. Sebastien Ourselin</a>, where I am developing AI-based smart orchestration systems for medical imaging workflows. My research aims to create intelligent systems that can automatically optimize imaging protocols, enhance diagnostic accuracy across various medical imaging modalities.
             </p>
           </div>
-          <img src="images/YigitAvci_circlee.JPG" alt="Mehmet Yigit Avci" class="profile-image">
-        </div>
-        
-        <div class="social-links">
-          <a href="mailto:yigitavci32@gmail.com" title="Email" target="_blank"><i class="fas fa-envelope"></i></a>
-          <a href="data/MehmetYigitAvci_CV_6_aug_2025.pdf" target="_blank" title="CV"><i class="ai ai-cv"></i></a>
-          <a href="https://linkedin.com/in/mehmet-yigit-avci" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://scholar.google.com/citations?user=G-x5LvkAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-          <a href="https://github.com/myigitavci" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
 
-      <div class="content">
-        <div class="section">
-          <h2 class="section-title">About Me</h2>
-          <p class="about-text">
-            I am passionate about advancing medical AI technologies that can improve patient care and clinical decision-making. My journey in medical imaging began during my undergraduate studies at <a href="https://www.boun.edu.tr/en-US/Index">Bogazici University</a>, where I worked on Alzheimer's disease detection using brain connectomes in the <a href="https://vavlab.boun.edu.tr/">VAVlab</a> under the guidance of <a href="https://vavlab.boun.edu.tr/burak-acar-phd">Prof. Burak Acar</a>.
-          </p>
-          <p class="about-text">
-            During my research career, I have had the privilege of collaborating with leading experts in the field. At the <a href="https://www.martinos.org/">Athinoula A. Martinos Center for Biomedical Imaging</a>, I worked with <a href="https://martinos.org/~berkin/">Prof. Berkin Bilgic</a> and <a href="https://birthlab.github.io/pi.html">Prof. Qiyuan Tian</a> on cutting-edge diffusion MRI techniques and deep learning applications. This experience deepened my understanding of the intersection between advanced imaging technologies and artificial intelligence.
-          </p>
-          <p class="about-text">
-            I also completed a research internship with the <a href="https://compai-lab.github.io/">COMPAI Lab</a> at TUM, working under the supervision of <a href="https://compai-lab.github.io/author/julia-a.-schnabel/">Prof. Julia Schnabel</a>, <a href="https://compai-lab.github.io/author/veronika-zimmer/">Dr. Veronika Zimmer</a>, and <a href="https://ci.bercea.net/">Dr. Cosmin Bercea</a>. This collaboration focused on unsupervised representation learning for Alzheimer's disease, resulting in innovative approaches to medical image analysis.
-          </p>
-          <p class="about-text">
-            Currently, I am pursuing my PhD at King's College London under the supervision of <a href="https://www.kcl.ac.uk/people/jorge-cardoso">Dr. Jorge Cardoso</a>, and <a href="https://www.kcl.ac.uk/people/sebastien-ourselin">Prof. Sebastien Ourselin</a>, where I am developing AI-based smart orchestration systems for medical imaging workflows. My research aims to create intelligent systems that can automatically optimize imaging protocols, enhance diagnostic accuracy across various medical imaging modalities.
-          </p>
-        </div>
-
-        <div class="section">
-          <h2 class="section-title">Research Interests</h2>
-          <div class="interests-grid">
-            <div class="interest-item">
-              <i class="fas fa-brain"></i> Medical Image Analysis
-            </div>
-            <div class="interest-item">
-              <i class="fas fa-magnet"></i> MRI & Diffusion Imaging
-            </div>
-            <div class="interest-item">
-              <i class="fas fa-network-wired"></i> Deep Learning
-            </div>
-            <div class="interest-item">
-              <i class="fas fa-search"></i> Unsupervised Learning
-            </div>
-            <div class="interest-item">
-              <i class="fas fa-layer-group"></i> Multi-Modal Learning
-            </div>
-            <div class="interest-item">
-              <i class="fas fa-robot"></i> AI in Healthcare
+          <div class="section" id="interests">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="interests-grid">
+              <div class="interest-item">
+                <i class="fas fa-brain"></i> Medical Image Analysis
+              </div>
+              <div class="interest-item">
+                <i class="fas fa-magnet"></i> MRI & Diffusion Imaging
+              </div>
+              <div class="interest-item">
+                <i class="fas fa-network-wired"></i> Deep Learning
+              </div>
+              <div class="interest-item">
+                <i class="fas fa-search"></i> Unsupervised Learning
+              </div>
+              <div class="interest-item">
+                <i class="fas fa-layer-group"></i> Multi-Modal Learning
+              </div>
+              <div class="interest-item">
+                <i class="fas fa-robot"></i> AI in Healthcare
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="section">
-          <h2 class="section-title">Education</h2>
-          <div class="education-item">
-            <div class="education-icon">
-              <i class="fas fa-graduation-cap"></i>
+          <div class="section" id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+              <div class="education-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="education-details">
+                <h3>PhD in Medical AI</h3>
+                <p>King's College London</p>
+                <span class="education-year">2024-2028</span>
+              </div>
             </div>
-            <div class="education-details">
-              <h3>PhD in Medical AI</h3>
-              <p>King's College London</p>
-              <span class="education-year">2024-2028</span>
+            <div class="education-item">
+              <div class="education-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="education-details">
+                <h3>MSc in Biomedical Computing</h3>
+                <p>Technical University of Munich (TUM)</p>
+                <span class="education-year">2022-2024</span>
+              </div>
+            </div>
+            <div class="education-item">
+              <div class="education-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="education-details">
+                <h3>BSc in Electrical &amp; Electronics Engineering</h3>
+                <p>Bogazici University</p>
+                <span class="education-year">2017-2022</span>
+              </div>
             </div>
           </div>
-          <div class="education-item">
-            <div class="education-icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="education-details">
-              <h3>MSc in Biomedical Computing</h3>
-              <p>Technical University of Munich (TUM)</p>
-              <span class="education-year">2022-2024</span>
-            </div>
+
+          <div class="section" id="updates">
+            <h2 class="section-title">Recent Updates</h2>
+            <ul class="updates-list">
+              <li class="update-item">
+                <div class="update-date">July 2025</div>
+                <div>MR-CLIP accepted at MICCAI MLMI Workshop 2025</div>
+              </li>
+              <li class="update-item">
+                <div class="update-date">April 2025</div>
+                <div>Presented ZS-PRIME at ISMRM 2025</div>
+              </li>
+              <li class="update-item">
+                <div class="update-date">October 2024</div>
+                <div>Started my PhD at King's College London</div>
+              </li>
+              <li class="update-item">
+                <div class="update-date">October 2024</div>
+                <div>Finished my Master's Degree in Biomedical Computing at TUM!</div>
+              </li>
+              <li class="update-item">
+                <div class="update-date">October 2024</div>
+                <div>Received Best Paper Award for our work on Unsupervised Alzheimer's Disease Analysis in MICCAI EMERGE Workshop!</div>
+              </li>
+              <li class="update-item">
+                <div class="update-date">September 2022</div>
+                <div>Started at TUM for my Master's Degree in Biomedical Computing</div>
+              </li>
+              <li class="update-item">
+                <div class="update-date">September 2022</div>
+                <div>Started working as a Machine Learning Intern at deepc, working on benchmarking radiology AI, detection of body part with deep learning and NLP solutions</div>
+              </li>
+              <li class="update-item">
+                <div class="update-date">June 2022</div>
+                <div>Graduated from Bogazici University with a BSc degree in Electrical and Electronics Engineering</div>
+              </li>
+              <li class="update-item">
+                <div class="update-date">May 2022</div>
+                <div>Presented my first abstract in ISMRM 2022</div>
+              </li>
+            </ul>
           </div>
-          <div class="education-item">
-            <div class="education-icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="education-details">
-              <h3>BSc in Electrical & Electronics Engineering</h3>
-              <p>Bogazici University</p>
-              <span class="education-year">2017-2022</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="section">
-          <h2 class="section-title">Recent Updates</h2>
-          <ul class="updates-list">
-            <li class="update-item">
-              <div class="update-date">July 2025</div>
-              <div>MR-CLIP accepted at MICCAI MLMI Workshop 2025</div>
-            </li>
-            <li class="update-item">
-              <div class="update-date">April 2025</div>
-              <div>Presented ZS-PRIME at ISMRM 2025</div>
-            </li>
-            <li class="update-item">
-              <div class="update-date">October 2024</div>
-              <div>Started my PhD at King's College London</div>
-            </li>
-            <li class="update-item">
-              <div class="update-date">October 2024</div>
-              <div>Finished my Master's Degree in Biomedical Computing at TUM!</div>
-            </li>
-            <li class="update-item">
-              <div class="update-date">October 2024</div>
-              <div>Received Best Paper Award for our work on Unsupervised Alzheimer's Disease Analysis in MICCAI EMERGE Workshop!</div>
-            </li>
-            <li class="update-item">
-              <div class="update-date">September 2022</div>
-              <div>Started at TUM for my Master's Degree in Biomedical Computing</div>
-            </li>
-            <li class="update-item">
-              <div class="update-date">September 2022</div>
-              <div>Started working as a Machine Learning Intern at deepc, working on benchmarking radiology AI, detection of body part with deep learning and NLP solutions</div>
-            </li>
-            <li class="update-item">
-              <div class="update-date">June 2022</div>
-              <div>Graduated from Bogazici University with a BSc degree in Electrical and Electronics Engineering</div>
-            </li>
-            <li class="update-item">
-              <div class="update-date">May 2022</div>
-              <div>Presented my first abstract in ISMRM 2022</div>
-            </li>
-          </ul>
-        </div>
+          <div class="section" id="projects">
+            <h2 class="section-title">Research Projects</h2>
+            <div class="projects-grid">
 
-        <div class="section">
-          <h2 class="section-title">Research Projects</h2>
-          <div class="projects-grid">
-
-            <div class="project-card">
-              <img src="images/MR-CLIP-small.png" alt="MR-CLIP" class="project-image">
-              <div class="project-content">
-                <h3 class="project-title">
-                  <a href="https://www.arxiv.org/abs/2507.00043">MR-CLIP: Efficient Metadata-Guided Learning of MRI Contrast Representations
-                  </a>
-                </h3>
-                <p class="project-authors">Mehmet Yigit Avci, Pedro Borges, Paul Wright, Mehmet Yigitsoy, Sebastien Ourselin, Jorge Cardoso</p>
-                <div class="project-links">
-                  <a href="https://www.arxiv.org/abs/2507.00043">arXiv</a>
-                  <a href="https://github.com/myigitavci/MR-CLIP">Code</a>
+              <div class="project-card">
+                <img src="images/DIST_CLIP_Short.png" alt="DIST-CLIP" class="project-image">
+                <div class="project-content">
+                  <h3 class="project-title">
+                    <a href="https://www.arxiv.org/abs/2512.07674">DIST-CLIP: Arbitrary Metadata and Image Guided MRI Harmonization via Disentangled Anatomy-Contrast Representations</a>
+                  </h3>
+                  <p class="project-authors">Mehmet Yigit Avci, Pedro Borges, Virginia Fernandez, Paul Wright, Mehmet Yigitsoy, Sebastien Ourselin, Jorge Cardoso</p>
+                  <div class="project-links">
+                    <a href="https://www.arxiv.org/abs/2512.07674">arXiv</a>
+                  </div>
+                  <p class="project-description">
+                    <strong>Unified metadata &amp; image-guided harmonization</strong> — DIST-CLIP disentangles anatomy from contrast using CLIP-derived embeddings and an adaptive style transfer module. It harmonizes MRI across scanners and protocols using either target images or DICOM metadata, improving style fidelity while preserving anatomy.
+                  </p>
                 </div>
-                <p class="project-description">
-                  <strong>MICCAI MLMI Workshop 2025</strong> - MR-CLIP is a multimodal contrastive learning framework that aligns MR images with their DICOM metadata to learn contrast-aware representations without requiring manual labels. Trained on diverse clinical data, it enables robust, anatomy-invariant representations for tasks like cross-modal retrieval and contrast classification, even in the presence of incomplete or noisy metadata.
-                </p>
               </div>
-            </div>
 
-            <div class="project-card">
-              <img src="images/ZS-PRIME.png" alt="ZS-PRIME" class="project-image">
-              <div class="project-content">
-                <h3 class="project-title">
-                  <a href="https://submissions.mirasmart.com/ISMRM2025/ViewSubmissionTeaser.aspx">Zero-Shot Self-Supervised Distortion-Free Diffusion MRI Reconstruction</a>
-                </h3>
-                <p class="project-authors">Mehmet Yigit Avci, Jaejin Cho, Yohan Jun, Berkin Bilgic</p>
-                <div class="project-links">
-                  <a href="https://submissions.mirasmart.com/ISMRM2025/ViewSubmissionTeaser.aspx">ISMRM 2025</a>
-                  <a href="https://github.com/myigitavci/zs-prime">Code</a>
+              <div class="project-card">
+                <img src="images/MR-CLIP-small.png" alt="MR-CLIP" class="project-image">
+                <div class="project-content">
+                  <h3 class="project-title">
+                    <a href="https://www.arxiv.org/abs/2507.00043">MR-CLIP: Efficient Metadata-Guided Learning of MRI Contrast Representations
+                    </a>
+                  </h3>
+                  <p class="project-authors">Mehmet Yigit Avci, Pedro Borges, Paul Wright, Mehmet Yigitsoy, Sebastien Ourselin, Jorge Cardoso</p>
+                  <div class="project-links">
+                    <a href="https://www.arxiv.org/abs/2507.00043">arXiv</a>
+                    <a href="https://github.com/myigitavci/MR-CLIP">Code</a>
+                  </div>
+                  <p class="project-description">
+                    <strong>MICCAI MLMI Workshop 2025</strong> - MR-CLIP is a multimodal contrastive learning framework that aligns MR images with their DICOM metadata to learn contrast-aware representations without requiring manual labels. Trained on diverse clinical data, it enables robust, anatomy-invariant representations for tasks like cross-modal retrieval and contrast classification.
+                  </p>
                 </div>
-                <p class="project-description">
-                  <strong>ISMRM 2025</strong> - ZS-PRIME combines advanced field map estimation (PRIME) with zero-shot self-supervised training, achieving distortion-free, high-resolution multi-shot diffusion MRI from undersampled data. This obviates the dependency on external training datasets, setting a new benchmark for efficient, high-fidelity diffusion MRI.
-                </p>
               </div>
-            </div>
 
-            <div class="project-card">
-              <img src="images/morphaues.gif" alt="MORPHADE Project" class="project-image">
-              <div class="project-content">
-                <h3 class="project-title">
-                  <a href="https://arxiv.org/abs/2407.03863">Unsupervised Analysis of Alzheimer's Disease Signatures using 3D Deformable Autoencoders</a>
-                </h3>
-                <p class="project-authors">Mehmet Yigit Avci*, Emily Chan*, Veronika A Zimmer, Daniel Rueckert, Benedikt Wiestler, Julia A Schnabel, Cosmin I. Bercea</p>
-                <div class="project-links">
-                  <a href="https://github.com/ci-ber/MORPHADE">Code</a>
-                  <a href="https://arxiv.org/abs/2407.03863">arXiv</a>
+              <div class="project-card">
+                <img src="images/ZS-PRIME.png" alt="ZS-PRIME" class="project-image">
+                <div class="project-content">
+                  <h3 class="project-title">
+                    <a href="https://submissions.mirasmart.com/ISMRM2025/ViewSubmissionTeaser.aspx">Zero-Shot Self-Supervised Distortion-Free Diffusion MRI Reconstruction</a>
+                  </h3>
+                  <p class="project-authors">Mehmet Yigit Avci, Jaejin Cho, Yohan Jun, Berkin Bilgic</p>
+                  <div class="project-links">
+                    <a href="https://submissions.mirasmart.com/ISMRM2025/ViewSubmissionTeaser.aspx">ISMRM 2025</a>
+                    <a href="https://github.com/myigitavci/zs-prime">Code</a>
+                  </div>
+                  <p class="project-description">
+                    <strong>ISMRM 2025</strong> - ZS-PRIME combines advanced field map estimation (PRIME) with zero-shot self-supervised training, achieving distortion-free, high-resolution multi-shot diffusion MRI from undersampled data. This obviates the dependency on external training datasets, setting a new benchmark for efficient, high-fidelity diffusion MRI.
+                  </p>
                 </div>
-                <p class="project-description">
-                  <strong>MICCAI EMERGE Workshop 2024 (Best Paper Award)</strong> - We present MORPHADE (Morphological Autoencoders for Alzheimer's Disease Detection), a novel unsupervised learning approach which uses deformations to allow the analysis of 3D T1-weighted brain images. To the best of our knowledge, this is the first use of deformations with deep unsupervised learning to not only detect, but also localize and assess the severity of structural changes in the brain due to AD.
-                </p>
               </div>
-            </div>
 
-            <div class="project-card">
-              <img src="images/neurotest.JPG" alt="NeuroTest Project" class="project-image">
-              <div class="project-content">
-                <h3 class="project-title">
-                  <a href="https://doi.org/10.1117/1.JMI.11.2.024013">Simulation of acquisition shifts in T2 Flair MR images to stress test AI segmentation networks</a>
-                </h3>
-                <p class="project-authors">Christiane Posselt, Mehmet Yigit Avci, Mehmet Yigitsoy, Patrick Schuenke, Christoph Kolbitsch, Tobias Schaeffter, Stefanie Remmele</p>
-                <div class="project-links">
-                  <a href="https://doi.org/10.1117/1.JMI.11.2.024013">Journal Paper</a>
+              <div class="project-card">
+                <img src="images/morphaues.gif" alt="MORPHADE Project" class="project-image">
+                <div class="project-content">
+                  <h3 class="project-title">
+                    <a href="https://arxiv.org/abs/2407.03863">Unsupervised Analysis of Alzheimer's Disease Signatures using 3D Deformable Autoencoders</a>
+                  </h3>
+                  <p class="project-authors">Mehmet Yigit Avci*, Emily Chan*, Veronika A Zimmer, Daniel Rueckert, Benedikt Wiestler, Julia A Schnabel, Cosmin I. Bercea</p>
+                  <div class="project-links">
+                    <a href="https://github.com/ci-ber/MORPHADE">Code</a>
+                    <a href="https://arxiv.org/abs/2407.03863">arXiv</a>
+                  </div>
+                  <p class="project-description">
+                    <strong>MICCAI EMERGE Workshop 2024 (Best Paper Award)</strong> - We present MORPHADE (Morphological Autoencoders for Alzheimer's Disease Detection), a novel unsupervised learning approach which uses deformations to allow the analysis of 3D T1-weighted brain images. To the best of our knowledge, this is the first use of deformations with deep unsupervised learning to not only detect, but also localize and assess the severity of structural changes in the brain due to AD.
+                  </p>
                 </div>
-                <p class="project-description">
-                  <strong>Journal of Medical Imaging, 2024</strong> - This work's goal is to provide a simulation framework for routine neuroimaging test data, which allows for "stress testing" of deep segmentation networks against acquisition shifts that commonly occur in clinical practice for T2w FLAIR MRI protocols.
-                </p>
               </div>
-            </div>
 
-            <div class="project-card">
-              <img src="images/quad.JPG" alt="QUAD Challenge" class="project-image">
-              <div class="project-content">
-                <h3 class="project-title">
-                  <a href="https://www.sciencedirect.com/science/article/pii/S2213158223001742">Validation of deep learning techniques for quality augmentation in diffusion MRI for clinical studies</a>
-                </h3>
-                <p class="project-authors">Santiago Aja-Fernandez,...Mehmet Yigit Avci, Zihan Li, Berkin Bilgic, Qiyuan Tian,... Tomasz Pieciak</p>
-                <div class="project-links">
-                  <a href="https://www.sciencedirect.com/science/article/pii/S2213158223001742">Journal Paper</a>
-                  <a href="https://www.lpi.tel.uva.es/quad22/Results.html">QUAD Results</a>
+              <div class="project-card">
+                <img src="images/neurotest.JPG" alt="NeuroTest Project" class="project-image">
+                <div class="project-content">
+                  <h3 class="project-title">
+                    <a href="https://doi.org/10.1117/1.JMI.11.2.024013">Simulation of acquisition shifts in T2 Flair MR images to stress test AI segmentation networks</a>
+                  </h3>
+                  <p class="project-authors">Christiane Posselt, Mehmet Yigit Avci, Mehmet Yigitsoy, Patrick Schuenke, Christoph Kolbitsch, Tobias Schaeffter, Stefanie Remmele</p>
+                  <div class="project-links">
+                    <a href="https://doi.org/10.1117/1.JMI.11.2.024013">Journal Paper</a>
+                  </div>
+                  <p class="project-description">
+                    <strong>Journal of Medical Imaging, 2024</strong> - This work's goal is to provide a simulation framework for routine neuroimaging test data, which allows for "stress testing" of deep segmentation networks against acquisition shifts that commonly occur in clinical practice for T2w FLAIR MRI protocols.
+                  </p>
                 </div>
-                <p class="project-description">
-                  <strong>ISMRM 2023, NeuroImage: Clinical, 2023</strong> - Participated in <a href="https://www.lpi.tel.uva.es/quad22/index.html">QUAD Challenge in MICCAI 2022</a> and got the 4th place with combination of methods <a href="https://arxiv.org/abs/2112.01587">DUnet</a> and <a href="https://github.com/qiyuantian/DeepDTI">deepDTI</a>.
-                </p>
               </div>
-            </div>
 
-            <div class="project-card">
-              <img src="images/dunet.JPG" alt="DUnet Project" class="project-image">
-              <div class="project-content">
-                <h3 class="project-title">
-                  <a href="https://arxiv.org/abs/2112.01587"><b>DUnet</b>: Quantifying the uncertainty of neural networks using Monte Carlo dropout for safer and more accurate deep learning based quantitative MRI</a>
-                </h3>
-                <p class="project-authors">M Yigit Avci, Z Li, Q Fan, S Huang, B Bilgic, Q Tian</p>
-                <div class="project-links">
-                  <a href="https://github.com/myigitavci/dropout_ISMRM">Code</a>
-                  <a href="https://arxiv.org/abs/2112.01587">arXiv</a>
+              <div class="project-card">
+                <img src="images/quad.JPG" alt="QUAD Challenge" class="project-image">
+                <div class="project-content">
+                  <h3 class="project-title">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S2213158223001742">Validation of deep learning techniques for quality augmentation in diffusion MRI for clinical studies</a>
+                  </h3>
+                  <p class="project-authors">Santiago Aja-Fernandez,...Mehmet Yigit Avci, Zihan Li, Berkin Bilgic, Qiyuan Tian,... Tomasz Pieciak</p>
+                  <div class="project-links">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S2213158223001742">Journal Paper</a>
+                    <a href="https://www.lpi.tel.uva.es/quad22/Results.html">QUAD Results</a>
+                  </div>
+                  <p class="project-description">
+                    <strong>ISMRM 2023, NeuroImage: Clinical, 2023</strong> - Participated in <a href="https://www.lpi.tel.uva.es/quad22/index.html">QUAD Challenge in MICCAI 2022</a> and got the 4th place with combination of methods <a href="https://arxiv.org/abs/2112.01587">DUnet</a> and <a href="https://github.com/qiyuantian/DeepDTI">deepDTI</a>.
+                  </p>
                 </div>
-                <p class="project-description">
-                  <strong>ISMRM 2022</strong> - Dropout is conventionally used during the training phase as regularization method and for quantifying uncertainty in deep learning. We propose to use dropout during training as well as inference steps, and average multiple predictions to improve the accuracy, while reducing and quantifying the uncertainty.
-                </p>
+              </div>
+
+              <div class="project-card">
+                <img src="images/dunet.JPG" alt="DUnet Project" class="project-image">
+                <div class="project-content">
+                  <h3 class="project-title">
+                    <a href="https://arxiv.org/abs/2112.01587"><b>DUnet</b>: Quantifying the uncertainty of neural networks using Monte Carlo dropout for safer and more accurate deep learning based quantitative MRI</a>
+                  </h3>
+                  <p class="project-authors">M Yigit Avci, Z Li, Q Fan, S Huang, B Bilgic, Q Tian</p>
+                  <div class="project-links">
+                    <a href="https://github.com/myigitavci/dropout_ISMRM">Code</a>
+                    <a href="https://arxiv.org/abs/2112.01587">arXiv</a>
+                  </div>
+                  <p class="project-description">
+                    <strong>ISMRM 2022</strong> - Dropout is conventionally used during the training phase as regularization method and for quantifying uncertainty in deep learning. We propose to use dropout during training as well as inference steps, and average multiple predictions to improve the accuracy, while reducing and quantifying the uncertainty.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
   </div>
 
   <a href="#top" class="back-to-top" id="backToTop">
