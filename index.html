@@ -517,6 +517,109 @@
       line-height: 1.65;
     }
 
+    /* ── MaRaI banner ── */
+    .marai-banner {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      background: linear-gradient(135deg, #0b1224 0%, #1e1b4b 100%);
+      border-radius: 18px;
+      padding: 2rem 2.5rem;
+      border: 1px solid rgba(109, 40, 217, 0.3);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+      align-items: center;
+    }
+
+    .marai-logo {
+      width: 100%;
+      object-fit: contain;
+      filter: brightness(1.05);
+    }
+
+    .marai-tagline {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #a5b4fc;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.01em;
+    }
+
+    .marai-desc {
+      color: #cbd5e1;
+      font-size: 0.97rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+
+    .marai-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .marai-feature {
+      color: #e2e8f0;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .marai-models {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .marai-model-pill {
+      background: rgba(109, 40, 217, 0.25);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      color: #c4b5fd;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .pill-badge {
+      background: #6d28d9;
+      color: white;
+      font-size: 0.7rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 10px;
+    }
+
+    .marai-banner .project-links a {
+      color: #c4b5fd;
+      border-color: rgba(139, 92, 246, 0.5);
+      background: rgba(109, 40, 217, 0.15);
+    }
+
+    .marai-banner .project-links a:hover {
+      background: #6d28d9;
+      color: white;
+      border-color: #6d28d9;
+    }
+
+    @media (max-width: 768px) {
+      .marai-banner {
+        grid-template-columns: 1fr;
+      }
+      .marai-logo {
+        max-width: 180px;
+        margin: 0 auto;
+        display: block;
+      }
+      .marai-features {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .footer {
       text-align: center;
       padding: 2rem;
@@ -614,6 +717,7 @@
         <li><a href="#interests">Research Interests</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#updates">Updates</a></li>
+        <li><a href="#marai">MaRaI</a></li>
         <li><a href="#projects">Projects</a></li>
       </ul>
       <div class="contact">
@@ -731,6 +835,10 @@
                 <div class="update-text">MR-CLIP accepted at MICCAI MLMI Workshop 2025</div>
               </li>
               <li class="update-item">
+                <div class="update-date">2025</div>
+                <div class="update-text">3D MR-CLIP accepted as <strong>Oral</strong> at ISBI 2025</div>
+              </li>
+              <li class="update-item">
                 <div class="update-date">Apr 2025</div>
                 <div class="update-text">Presented ZS-PRIME at ISMRM 2025</div>
               </li>
@@ -765,6 +873,40 @@
             </ul>
           </div>
 
+          <!-- ── MaRaI dedicated section ── -->
+          <div class="section" id="marai">
+            <h2 class="section-title">MaRaI — Open-Source Codebase</h2>
+            <div class="marai-banner">
+              <div class="marai-banner-left">
+                <img src="images/marai-logo.png" alt="MaRaI Logo" class="marai-logo">
+              </div>
+              <div class="marai-banner-right">
+                <p class="marai-tagline">Building acquisition-aware foundation models for radiology</p>
+                <p class="marai-desc">
+                  <strong>MaRaI</strong> (<em>Multimodal Acquisition-Aware Radiology AI</em>) is the central open-source repository for all our work on foundation models for radiology. It unifies <strong>MR-CLIP</strong> (2D &amp; 3D) and <strong>DIST-CLIP</strong> with a shared philosophy: acquisition metadata is a first-class signal, not an afterthought.
+                </p>
+                <div class="marai-features">
+                  <div class="marai-feature"><span>🔍</span> Contrast-aware retrieval</div>
+                  <div class="marai-feature"><span>🏷️</span> Automated protocol tagging</div>
+                  <div class="marai-feature"><span>🧠</span> Transfer-ready representations</div>
+                  <div class="marai-feature"><span>🎨</span> MRI harmonization (image- &amp; text-guided)</div>
+                </div>
+                <div class="marai-models">
+                  <div class="marai-model-pill">MR-CLIP 2D · ViT-B/16</div>
+                  <div class="marai-model-pill">MR-CLIP 3D · <span class="pill-badge">ISBI Oral</span></div>
+                  <div class="marai-model-pill">DIST-CLIP · Harmonization</div>
+                </div>
+                <div class="project-links" style="margin-top:1.2rem;">
+                  <a href="https://github.com/myigitavci/MaRaI" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+                  <a href="https://arxiv.org/abs/2507.00043" target="_blank">arXiv (MR-CLIP)</a>
+                  <a href="https://arxiv.org/abs/2511.00681" target="_blank">arXiv (3D)</a>
+                  <a href="https://arxiv.org/abs/2512.07674" target="_blank">arXiv (DIST-CLIP)</a>
+                  <a href="https://scholar.google.com/citations?user=G-x5LvkAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar"></i> Scholar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="section" id="projects">
             <h2 class="section-title">Research Projects</h2>
             <div class="projects-grid">
@@ -778,6 +920,7 @@
                   <p class="project-authors">Mehmet Yigit Avci, Pedro Borges, Virginia Fernandez, Paul Wright, Mehmet Yigitsoy, Sebastien Ourselin, Jorge Cardoso</p>
                   <div class="project-links">
                     <a href="https://www.arxiv.org/abs/2512.07674">arXiv</a>
+                    <a href="https://github.com/myigitavci/MaRaI">Code (MaRaI)</a>
                   </div>
                   <p class="project-description">
                     <strong>Unified metadata &amp; image-guided harmonization</strong> — DIST-CLIP disentangles anatomy from contrast using CLIP-derived embeddings and an adaptive style transfer module. It harmonizes MRI across scanners and protocols using either target images or DICOM metadata, improving style fidelity while preserving anatomy.
@@ -789,16 +932,16 @@
                 <img src="images/MR-CLIP-small.png" alt="MR-CLIP" class="project-image">
                 <div class="project-content">
                   <h3 class="project-title">
-                    <a href="https://www.arxiv.org/abs/2507.00043">MR-CLIP: Efficient Metadata-Guided Learning of MRI Contrast Representations
-                    </a>
+                    <a href="https://www.arxiv.org/abs/2507.00043">MR-CLIP: Efficient Metadata-Guided Learning of MRI Contrast Representations</a>
                   </h3>
                   <p class="project-authors">Mehmet Yigit Avci, Pedro Borges, Paul Wright, Mehmet Yigitsoy, Sebastien Ourselin, Jorge Cardoso</p>
                   <div class="project-links">
-                    <a href="https://www.arxiv.org/abs/2507.00043">arXiv</a>
-                    <a href="https://github.com/myigitavci/MR-CLIP">Code</a>
+                    <a href="https://www.arxiv.org/abs/2507.00043">arXiv (2D)</a>
+                    <a href="https://arxiv.org/abs/2511.00681">arXiv (3D)</a>
+                    <a href="https://github.com/myigitavci/MaRaI">Code (MaRaI)</a>
                   </div>
                   <p class="project-description">
-                    <strong>MICCAI MLMI Workshop 2025</strong> - MR-CLIP is a multimodal contrastive learning framework that aligns MR images with their DICOM metadata to learn contrast-aware representations without requiring manual labels. Trained on diverse clinical data, it enables robust, anatomy-invariant representations for tasks like cross-modal retrieval and contrast classification.
+                    <strong>MICCAI MLMI Workshop 2025 &amp; ISBI 2025 (3D — Oral)</strong> — MR-CLIP aligns MR images with DICOM acquisition metadata via contrastive learning to produce contrast-aware representations without manual labels. The 3D extension operates on full volumes with a 3D ViT-B/16 backbone and was accepted as an <strong>oral presentation at ISBI</strong>.
                   </p>
                 </div>
               </div>
