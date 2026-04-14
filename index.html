@@ -589,9 +589,11 @@
     .pill-badge {
       background: #6d28d9;
       color: white;
-      font-size: 0.7rem;
-      padding: 0.1rem 0.45rem;
-      border-radius: 10px;
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 0.15rem 0.5rem;
+      border-radius: 8px;
+      letter-spacing: 0.01em;
     }
 
     .marai-banner .project-links a {
@@ -831,12 +833,16 @@
             <h2 class="section-title">Recent Updates</h2>
             <ul class="updates-list">
               <li class="update-item">
-                <div class="update-date">Jul 2025</div>
-                <div class="update-text">MR-CLIP accepted at MICCAI MLMI Workshop 2025</div>
+                <div class="update-date">2026</div>
+                <div class="update-text">MR-CLIP 3D accepted as oral at ISBI 2026</div>
               </li>
               <li class="update-item">
-                <div class="update-date">2025</div>
-                <div class="update-text">3D MR-CLIP accepted as <strong>Oral</strong> at ISBI 2025</div>
+                <div class="update-date">2026</div>
+                <div class="update-text">DIST-CLIP accepted as oral at MIDL 2026</div>
+              </li>
+              <li class="update-item">
+                <div class="update-date">Jul 2025</div>
+                <div class="update-text">MR-CLIP 2D accepted as oral at MICCAI MLMI Workshop 2025</div>
               </li>
               <li class="update-item">
                 <div class="update-date">Apr 2025</div>
@@ -892,16 +898,15 @@
                   <div class="marai-feature"><span>🎨</span> MRI harmonization (image- &amp; text-guided)</div>
                 </div>
                 <div class="marai-models">
-                  <div class="marai-model-pill">MR-CLIP 2D · ViT-B/16</div>
-                  <div class="marai-model-pill">MR-CLIP 3D · <span class="pill-badge">ISBI Oral</span></div>
-                  <div class="marai-model-pill">DIST-CLIP · Harmonization</div>
+                  <div class="marai-model-pill">MR-CLIP 2D <span class="pill-badge">MICCAI MLMI 2025 Oral</span></div>
+                  <div class="marai-model-pill">MR-CLIP 3D <span class="pill-badge">ISBI 2026 Oral</span></div>
+                  <div class="marai-model-pill">DIST-CLIP <span class="pill-badge">MIDL 2026 Oral</span></div>
                 </div>
                 <div class="project-links" style="margin-top:1.2rem;">
                   <a href="https://github.com/myigitavci/MaRaI" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
-                  <a href="https://arxiv.org/abs/2507.00043" target="_blank">arXiv (MR-CLIP)</a>
-                  <a href="https://arxiv.org/abs/2511.00681" target="_blank">arXiv (3D)</a>
+                  <a href="https://arxiv.org/abs/2507.00043" target="_blank">arXiv (MR-CLIP 2D)</a>
+                  <a href="https://arxiv.org/abs/2511.00681" target="_blank">arXiv (MR-CLIP 3D)</a>
                   <a href="https://arxiv.org/abs/2512.07674" target="_blank">arXiv (DIST-CLIP)</a>
-                  <a href="https://scholar.google.com/citations?user=G-x5LvkAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar"></i> Scholar</a>
                 </div>
               </div>
             </div>
@@ -923,7 +928,7 @@
                     <a href="https://github.com/myigitavci/MaRaI">Code (MaRaI)</a>
                   </div>
                   <p class="project-description">
-                    <strong>Unified metadata &amp; image-guided harmonization</strong> — DIST-CLIP disentangles anatomy from contrast using CLIP-derived embeddings and an adaptive style transfer module. It harmonizes MRI across scanners and protocols using either target images or DICOM metadata, improving style fidelity while preserving anatomy.
+                    <strong>MIDL 2026 (Oral)</strong> — DIST-CLIP disentangles anatomy from contrast using CLIP-derived embeddings and an adaptive style transfer module. It harmonizes MRI across scanners and protocols using either target images or DICOM metadata, improving style fidelity while preserving anatomy.
                   </p>
                 </div>
               </div>
@@ -941,7 +946,7 @@
                     <a href="https://github.com/myigitavci/MaRaI">Code (MaRaI)</a>
                   </div>
                   <p class="project-description">
-                    <strong>MICCAI MLMI Workshop 2025 &amp; ISBI 2025 (3D — Oral)</strong> — MR-CLIP aligns MR images with DICOM acquisition metadata via contrastive learning to produce contrast-aware representations without manual labels. The 3D extension operates on full volumes with a 3D ViT-B/16 backbone and was accepted as an <strong>oral presentation at ISBI</strong>.
+                    <strong>MR-CLIP 2D: MICCAI MLMI 2025 (Oral) · MR-CLIP 3D: ISBI 2026 (Oral)</strong> — MR-CLIP aligns MR images with DICOM acquisition metadata via contrastive learning to produce contrast-aware representations without manual labels. MR-CLIP 3D extends to full volumes with a 3D ViT-B/16 backbone, accepted as an oral at ISBI 2026.
                   </p>
                 </div>
               </div>
